@@ -1,0 +1,3 @@
+Nombre    Apellido     Telefono
+========== ======== ========
+Mickey     Mouse    345       
