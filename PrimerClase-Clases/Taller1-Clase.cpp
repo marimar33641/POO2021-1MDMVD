@@ -30,6 +30,67 @@ class Rectangulo{
         void setAncho( float );
 
 };
+
+class Triangulo{
+    private:
+        float base, altura;
+    public:
+        Triangulo();
+        Triangulo( float, float );
+        void calcularPerimetroTriangulo(  );
+        void calcularAreaTriangulo(  );
+        float getAlturaTriangulo(  ); 
+        float getBaseTriangulo(  );
+        void setAlturaTriangulo( float ); 
+        void setBaseTriangulo( float );
+};
+
+Triangulo::Triangulo(  ){
+    base = 0;
+    altura = 0;
+}
+
+Triangulo::Triangulo( float altura, float base ){
+    this->altura = altura;
+    this->base = base;
+}
+
+void Triangulo::calcularAreaTriangulo(  ){
+    float area;
+    area = ( base * altura ) / 2;
+    cout<<"El area del triangulo es de "<< area<<"\n";
+}
+void Triangulo::calcularPerimetroTriangulo(  ){
+    float perimetro, hipotenusa;
+    hipotenusa =  sqrt(pow( ( base / 2 ), 2 ) + pow( altura, 2 ));
+    perimetro = base + ( hipotenusa * 2 );
+    cout<<"El perimetro del triangulo es de: "<< perimetro<<"\n";
+}
+
+float Triangulo::getAlturaTriangulo(  ){
+    return this->altura;
+}
+
+float Triangulo::getBaseTriangulo(  ){
+    return this->base;
+}
+
+void Triangulo::setAlturaTriangulo( float altura ){
+    this->altura = altura;
+}
+
+void Triangulo::setBaseTriangulo( float base ){
+    this->base = base;
+}
+
+void crearTriangulo( Triangulo triangulos[ CAP ], int contadorTriangulos ){
+    float altura, base; 
+    cout<<"Digite la altura: "; cin>>altura;
+    cout<<"Digite la base: "; cin>>base;
+    triangulos[ contadorTriangulos ].setAlturaTriangulo( altura );
+    triangulos[ contadorTriangulos ].setBaseTriangulo( base );
+}
+
 Circulo::Circulo(  ){
     radio = 0;
 }
@@ -108,12 +169,12 @@ void crearRectangulo( Rectangulo rectangulo[ CAP ], int contadorRectangulos ){
 }
 
 void menu(){
-    cout<<"1.Crear Rectangulo\n2.Crear Circulo\n3.Mostrar Figuras\n0.Salir\n";
+    cout<<"1.Crear Rectangulo\n2.Crear Circulo\n3.Crear Triangulos\n4.Mostrar Figuras\n0.Salir\n";
 }
 
-void mostrarFiguras( Circulo circulo[ CAP ], Rectangulo rectangulo[ CAP ], int contadorCirculos, int contadorRectangulos ){
+void mostrarFiguras( Circulo circulo[ CAP ], Rectangulo rectangulo[ CAP ], int contadorCirculos, int contadorRectangulos, Triangulo triangulos[ CAP ], int contadorTriangulos ){
     int opcion, i;
-    cout<<"1.Mostrar Circulos\n2.Mostrar Rectagulos\nOpcion: "; cin>>opcion;
+    cout<<"1.Mostrar Circulos\n2.Mostrar Rectagulos\n3.Mostrar Triangulos\nOpcion: "; cin>>opcion;
     if( opcion == 1 ){
         for( i = 0; i < contadorCirculos; i++ ){
             cout<<"\n------------------------------\n";
@@ -135,6 +196,17 @@ void mostrarFiguras( Circulo circulo[ CAP ], Rectangulo rectangulo[ CAP ], int c
             cout<<"\n------------------------------\n";
         }
     }
+    else if( opcion == 3 ){
+        for( i = 0; i < contadorTriangulos; i++ ){
+            cout<<"\n------------------------------\n";
+            cout<<"Rectangulo No. "<< i + 1<<"\n";
+            cout<<"Altura: "<<triangulos[ i ].getAlturaTriangulo()<<"\n";
+            cout<<"Base: "<<triangulos[ i ].getBaseTriangulo()<<"\n";
+            triangulos[ i ].calcularAreaTriangulo();
+            triangulos[ i ].calcularPerimetroTriangulo();
+            cout<<"\n------------------------------\n";
+        }
+    }
     else{
         cout<<"Opcion mal digitada\n";
     } 
@@ -144,7 +216,8 @@ int main(){
     //Creo mi primer objeto
     Rectangulo rectangulos[ CAP ];
     Circulo circulos[ CAP ];
-    int opcion, radio = 0, largo = 0, ancho = 0, contadorCirculos = 0, contadorRectagulos = 0;
+    Triangulo triangulos[ CAP ];
+    int opcion, radio = 0, largo = 0, ancho = 0, contadorCirculos = 0, contadorRectagulos = 0, contadorTriangulo = 0;
     do{
         menu();
         cout<<"Opcion: ";cin>>opcion;
@@ -169,19 +242,29 @@ int main(){
             }
         }
         else if( opcion == 3 ){
-            if(  ( contadorCirculos == 0 ) && ( contadorRectagulos == 0 ) ){
+            if( contadorTriangulo < CAP ){
+                crearTriangulo( triangulos, contadorTriangulo );
+                cout<<"Triangulo creado con exito :D\n";
+                contadorTriangulo++;
+            }
+            else{
+                cout<<"No hay espacio\n";
+            }
+
+        }
+        else if( opcion == 4 ){
+            if( ( contadorCirculos == 0 ) && ( contadorRectagulos == 0 ) && ( contadorTriangulo == 0 ) ){
                 cout<<"Vacio\n";
             }
             else{
                 mostrarFiguras( circulos, rectangulos, 
-                contadorCirculos, contadorRectagulos );
+                contadorCirculos, contadorRectagulos, triangulos, contadorTriangulo );
             }
         }
-        if(  ( contadorCirculos == 10 ) && ( contadorRectagulos == 10 ) ){
+        if( ( contadorCirculos == 10 ) && ( contadorRectagulos == 10 ) && ( contadorTriangulo == 10 ) ){
             cout<<"Ya no hay mas espacio en ningun arreglo\nGRACIAS POR UTILIZAR NUESTRO SOFTWARE :D\n";
             exit(-1);
             }
-        
     }while( opcion != 0 );
     getch();
     return 0;
