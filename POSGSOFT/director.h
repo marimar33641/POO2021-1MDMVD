@@ -11,9 +11,12 @@ using std::string;
 class Director{
     private:
         string nombreDirector;
+        string identificacion;
+        string email;
+        string celular;
     public:
         Director(  );
-        Director( string );
+        Director( string, string, string, string );
         void mostrarDirector(  );
 };
 

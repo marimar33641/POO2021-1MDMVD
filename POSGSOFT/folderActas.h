@@ -4,6 +4,8 @@
 #include <iostream>
 #include <list>
 #include "acta.h"
+#include "estudiante.h"
+#include "director.h"
 
 using std::cin;
 using std::cout;
@@ -14,12 +16,12 @@ using std::list;
 class FolderActas{
     private:
         string facultad;
-        list <Acta> listaActas;
+        list <Estudiante> listaEstudiantes;
     public:
         FolderActas(  );
-        FolderActas( string, list <Acta> );
-        void crearNuevaActa(  );
-        void diligenciarCalifaciones(  );
+        FolderActas(string, list <Estudiante> );
+        void crearNuevaActa( list<Director>, list<Jurado> );
+        void diligenciarCalifaciones( );
         void calcularNota(  );
         void ingresarInformacionAdicional(  );
         void cerrarActa(  );
@@ -28,6 +30,9 @@ class FolderActas{
         void listarActas(  );
         void consultarListaCriterios(  );
         void eliminarActas(  );
+        Estudiante crearEstudiante( );
+        Director buscarDirector();
+        
 };  
 
 #endif

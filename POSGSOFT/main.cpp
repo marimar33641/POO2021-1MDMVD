@@ -1,11 +1,12 @@
 #include <iostream>
-#include "criterios.h"
+#include "criterio.h"
 #include "acta.h"
 #include "director.h"
 #include "folderActas.h"
 #include "jurado.h"
 #include "menu.h"
 #include "universidad.h"
+#include "estudiante.h"
 
 using std::cin;
 using std::cout;
@@ -21,10 +22,30 @@ int main(){
         switch (opc)
         {
         case 1:
-
+            cout <<"Calma" << endl;
             break;
+        case 2:
+            cout << "Todavia no :V"<<endl;
+            break;
+        case 3:
+            cout << "Todavia no :V"<<endl;
+        case 4:
+            PUJ.crearDirector();
+            break;
+        case 5:
+            PUJ.mostrarTodosDirectores();
+            break;
+        case 6:
+            PUJ.crearJurado();
+            break;
+        case 7:
+            PUJ.mostrarJurados();
+            break;
+        case 0:
+            cout << "Hasta Luego :D" << endl;
         
         default:
+            cout << "Ponga un numero que sirva OOMMEEE : " << endl;
             break;
         }
     }while(opc != 0);

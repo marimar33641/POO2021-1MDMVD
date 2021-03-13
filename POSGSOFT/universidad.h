@@ -3,6 +3,7 @@
 #include "director.h"
 #include "jurado.h"
 #include "acta.h"
+#include "estudiante.h"
 
 #include <iostream>
 #include <string>
@@ -18,14 +19,19 @@ class Universidad{
     private:
         string nombre;
         list <Jurado> listaJurados;
-        list <Director> listDirector;
+        list <Director> listaDirector;
         list <Acta> listaActasXFacultad;
+        list <Estudiante> listaEstudiantes;
         list<string> codirectores;
     public:
         Universidad();
         void mostrarJurados();
         void crearJurado();
         void mostrarFolder();
+        void crearDirector();
+        void mostrarTodosDirectores();
+        void crearFolderActas();
+        void mostrarEstudiantes();
 };
 
 #endif

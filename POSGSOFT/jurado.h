@@ -13,12 +13,15 @@ class Jurado{
     private:
         string nombreJurado;
         int estado;
-    public:
-        Jurado();
-        Jurado( string, int );
-        void mostrarJurado();
-        void calificarCriterios(  );
+        string identificacion;
+        string email;
+        string celular;
 
+    public:
+        Jurado( );
+        Jurado( string, int, string, string, string );
+        void mostrarJurado( );
+        void calificarCriterios(  );
 };
 
 #endif

@@ -14,7 +14,7 @@ class Criterio{
         float calificacion;
         float ponderacion;
         string observaciones;
-        int por;
+        int jurado;
     public:
         Criterio();
         Criterio( string, float, float, string, int );
