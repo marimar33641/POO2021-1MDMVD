@@ -22,7 +22,7 @@ int main(){
         switch (opc)
         {
         case 1:
-            cout <<"Calma" << endl;
+            PUJ.crearFolderActas();
             break;
         case 2:
             cout << "Todavia no :V"<<endl;

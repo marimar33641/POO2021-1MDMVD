@@ -6,8 +6,7 @@
 #include <list>
 #include "criterio.h"
 #include "jurado.h"
-#include "estudiante.h"
-#include "director.h"
+#include "director.h" 
 
 using std::cin;
 using std::cout;
@@ -20,18 +19,25 @@ class Acta{
         string titulo;
         string fecha;
         Director director;
-        int periodo;
         int tipoTrabajo;
         Jurado jurado1;
         Jurado jurado2;
-        int notaFinal;
+        float notaFinal;
         int estado;
         list <Criterio> listaCriterios;
     public:
         Acta(  );
-        Acta( string, string, Director , int, int, Jurado, Jurado, int, int, list<Criterio> );
+        Acta( string, string, Director , int, Jurado, Jurado, float, int, list<Criterio> );
         void mostrarActa( );
-        void setActas( );
+        void setTitulo( string );
+        void setFecha( string );
+        void setDirector( Director );
+        void setTipoTrabajo( int );
+        void setJuradoUno( Jurado );
+        void setJuradoDos( Jurado );
+        void setNotaFinal( float );
+        void setEstado( int );
+        
 };
 
 

@@ -10,7 +10,7 @@ FolderActas::FolderActas(  ){
     this->listaEstudiantes = listaEstudiantes;
 }
 
-FolderActas::FolderActas( string facultad, list <Estudiante> listaEstudiantes  ){
+FolderActas::FolderActas( list <Director>, list<Jurado> ,string facultad, list <Estudiante> listaEstudiantes  ){
     this->facultad = facultad;
     this->listaEstudiantes = listaEstudiantes;
 };
@@ -41,20 +41,74 @@ Estudiante FolderActas::crearEstudiante( ){
     return *it;
 }
 
-Director FolderActas::buscarDirector(){
+Director FolderActas::buscarDirector( int numDirector ){
+    int i;
+    list<Director>::iterator it = listaDirector.begin();
+    for( i = 0; i < numDirector; i++ ){
+        it++;
+    }  
+    return *it;      
     
 }
 
-void FolderActas::crearNuevaActa( list<Director> listaDirectores, list<Jurado> listaJurados ){
+Jurado FolderActas::buscarJurado( int numJurado ){
+    int i;
+    list<Jurado>::iterator it = listaJurados.begin();
+    for( i = 0; i < numJurado; i++ ){
+        it++;
+    }  
+    return *it;
+}
+
+
+void FolderActas::mostrarDirectores(  ){
+    for( list<Director>::iterator it = listaDirector.begin(); it != listaDirector.end(); it++ ){
+        cout<<"1. ";
+        it->mostrarDirector( );
+    }
+}
+
+void FolderActas::crearNuevaActa( ){
     Estudiante estudiante;
     Director director;
+    Jurado juradoUno;
+    Jurado juradoDos;
     string fecha, nombreTrabajo;
+    Acta acta;
+    list<Criterio> listaCriteriosVasia;
+    int tipoTrabajo, estado, numeroDirector, numeroJuradoUno, NumeroJuradoDos;
     estudiante = crearEstudiante();
     cout << "Ingrese la fecha: " <<endl;
     getline(cin, fecha);
-    cout<< "Ingrese el titulo: "<<endl;
+    cout<< "Ingrese el titulo del trabajo: "<<endl;
     getline( cin, nombreTrabajo );
-    director = buscarDirector();
+    cout << "Ingrese el tipo de trabajo: " << endl << "1.Interno" << endl << "2.Externo" << endl;
+    cout << "opc = ";
+    cin >> tipoTrabajo;
+    mostrarDirectores();
+    cout << "Ingrese el numero de director que dirigio este trabajo: " << endl;
+    cin >> numeroDirector;
+    director = buscarDirector( numeroDirector );
+
+    cout << "Ingrese el numero del jurado numero 1: " << endl;
+    cin >> numeroJuradoUno;
+    juradoUno = buscarJurado(numeroJuradoUno);
+    cout << "Ingrese el numero del jurado numero 2: " << endl;
+    cin>>numeroJuradoUno;
+    juradoDos = buscarJurado(NumeroJuradoDos);
+
+    list<Estudiante>::iterator it = listaEstudiantes.end();
+    Acta acta(nombreTrabajo, fecha, director, tipoTrabajo, juradoUno, juradoDos, 0 , -1, listaCriteriosVasia); 
+    it->setActa(acta);
+    
+    do{
+        cout << "Desea cerrar el acta?" << endl << "1. Si" << endl << "2.No" << endl;
+        cin >> estado;
+    } while (estado == 1 || estado == 2);
+    
+    
+
+    
     return;
 }
 

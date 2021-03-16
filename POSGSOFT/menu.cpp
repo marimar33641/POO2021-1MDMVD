@@ -4,7 +4,7 @@
 void menu(){
     cout << endl;
     cout << "Ingrese la opcion que desea realizar: " << endl;
-    cout << "1. Crear acta"<<endl;
+    cout << "1. Crear Acta"<<endl;
     cout << "2. Modificar acta"<<endl;
     cout << "3. Mostrar actas" << endl;
     cout << "4. Crear director" << endl;

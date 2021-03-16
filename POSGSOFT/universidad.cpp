@@ -8,6 +8,7 @@ enum trabajo{
 
 void Universidad::crearFolderActas( ){
 
+
 };
 
 void Universidad::mostrarEstudiantes( ){
@@ -37,7 +38,7 @@ void Universidad::crearDirector( ){
 
 void Universidad::mostrarTodosDirectores(){
     for(list<Director>::iterator it = listaDirector.begin(); it != listaDirector.end(); it++ )
-    it->mostrarDirector();
+        it->mostrarDirector();
 }
 
 
@@ -74,5 +75,15 @@ void Universidad::mostrarJurados( ){
 
 Universidad :: Universidad( ){
     this->nombre = "Pontificia Universidad Javeriana Cali";
+}
+
+Estudiante Universidad::getListaEstudiante(){
+    list<Estudiante>::iterator it = listaEstudiantes.begin();
+    return *it;
+}
+
+Director Universidad::getListaDirectores(){
+    list<Director>::iterator it = listaDirector.begin();
+    return *it;
 }
 

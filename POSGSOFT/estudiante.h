@@ -15,12 +15,13 @@ class Estudiante{
         string identificacion;
         string email;
         string celular;
-        Acta actaEstudiantes;
+        Acta actaEstudiante;
         string id;
     public:
         Estudiante(  );
         Estudiante( string, string, string, string, Acta, string );
         void mostrarEstudiante(  );
+        void setActa( Acta );
 };
 
 #endif

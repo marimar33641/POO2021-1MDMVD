@@ -18,11 +18,12 @@ using std::list;
 class Universidad{
     private:
         string nombre;
-        list <Jurado> listaJurados;
-        list <Director> listaDirector;
-        list <Acta> listaActasXFacultad;
         list <Estudiante> listaEstudiantes;
         list<string> codirectores;
+    protected:
+        list <Director> listaDirector;
+        list <Acta> listaActasXFacultad;
+        list <Jurado> listaJurados;
     public:
         Universidad();
         void mostrarJurados();
@@ -32,6 +33,8 @@ class Universidad{
         void mostrarTodosDirectores();
         void crearFolderActas();
         void mostrarEstudiantes();
+        Estudiante getListaEstudiante( );
+        Director getListaDirectores( );
 };
 
 #endif

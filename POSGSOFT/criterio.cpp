@@ -9,7 +9,7 @@ Criterio::Criterio(string nombreCriterio, float calificacion, float ponderacion,
 
 void Criterio::mostrarCriterio(){
     cout << "================"<< endl;
-    cout << nombreCriterio << endl;
+    cout << "Nombre del criterio: "<< nombreCriterio << endl;
     cout << "Calificacion: " << calificacion << endl;
     cout << "Ponderacion" << ponderacion << endl;
     cout << "Observaciones" << endl << observaciones << endl;

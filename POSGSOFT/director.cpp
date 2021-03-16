@@ -2,6 +2,13 @@
 
 //Constructor Director
 
+Director :: Director(){
+    this->nombreDirector = "NA";
+    this->identificacion = "NA";
+    this->email = "NA";
+    this->celular = "NA";
+}
+
 Director::Director( string nombreDirector, string identificacion, string email, string celular){
     this->nombreDirector = nombreDirector; 
     this->identificacion = identificacion;

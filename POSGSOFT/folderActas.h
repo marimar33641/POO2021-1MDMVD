@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <list>
+#include "universidad.h"
 #include "acta.h"
 #include "estudiante.h"
 #include "director.h"
@@ -13,14 +14,15 @@ using std::endl;
 using std::string;
 using std::list;
 
-class FolderActas{
+class FolderActas : public Universidad{
     private:
         string facultad;
         list <Estudiante> listaEstudiantes;
+        list <Acta> listaActas;
     public:
         FolderActas(  );
-        FolderActas(string, list <Estudiante> );
-        void crearNuevaActa( list<Director>, list<Jurado> );
+        FolderActas(list <Director>, list <Jurado> ,string, list <Estudiante> );
+        void crearNuevaActa( );
         void diligenciarCalifaciones( );
         void calcularNota(  );
         void ingresarInformacionAdicional(  );
@@ -31,7 +33,9 @@ class FolderActas{
         void consultarListaCriterios(  );
         void eliminarActas(  );
         Estudiante crearEstudiante( );
-        Director buscarDirector();
+        Director buscarDirector( int );
+        Jurado buscarJurado( int );
+        void mostrarDirectores( );
         
 };  
 
