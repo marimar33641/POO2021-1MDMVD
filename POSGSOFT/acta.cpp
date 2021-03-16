@@ -59,4 +59,8 @@ void Acta::setEstado( int estado ){
     this->estado = estado;
 }
 
+void Acta::setListaCriterios( list<Criterio> listaCriterios ){
+    this->listaCriterios = listaCriterios;
+}
+
 

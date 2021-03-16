@@ -37,6 +37,7 @@ class Acta{
         void setJuradoDos( Jurado );
         void setNotaFinal( float );
         void setEstado( int );
+        void setListaCriterios( list <Criterio> );
         
 };
 

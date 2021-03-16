@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "acta.h"
+#include "criterio.h"
 
 using std::cin;
 using std::cout;
@@ -17,11 +18,13 @@ class Estudiante{
         string celular;
         Acta actaEstudiante;
         string id;
+        list<Criterio> listaCriterios;
     public:
         Estudiante(  );
         Estudiante( string, string, string, string, Acta, string );
         void mostrarEstudiante(  );
         void setActa( Acta );
+        void ingresarCriterios(  );
 };
 
 #endif

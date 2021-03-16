@@ -75,7 +75,7 @@ void FolderActas::crearNuevaActa( ){
     Jurado juradoDos;
     string fecha, nombreTrabajo;
     Acta acta;
-    list<Criterio> listaCriteriosVasia;
+    list<Criterio> listaCriteriosVacia;
     int tipoTrabajo, estado, numeroDirector, numeroJuradoUno, NumeroJuradoDos;
     estudiante = crearEstudiante();
     cout << "Ingrese la fecha: " <<endl;
@@ -98,16 +98,10 @@ void FolderActas::crearNuevaActa( ){
     juradoDos = buscarJurado(NumeroJuradoDos);
 
     list<Estudiante>::iterator it = listaEstudiantes.end();
-    Acta acta(nombreTrabajo, fecha, director, tipoTrabajo, juradoUno, juradoDos, 0 , -1, listaCriteriosVasia); 
+    Acta acta(nombreTrabajo, fecha, director, tipoTrabajo, juradoUno, juradoDos, 0 , -1, listaCriteriosVacia); 
     it->setActa(acta);
+    it->ingresarCriterios();
     
-    do{
-        cout << "Desea cerrar el acta?" << endl << "1. Si" << endl << "2.No" << endl;
-        cin >> estado;
-    } while (estado == 1 || estado == 2);
-    
-    
-
     
     return;
 }
