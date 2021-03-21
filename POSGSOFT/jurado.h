@@ -22,6 +22,7 @@ class Jurado{
         Jurado( string, int, string, string, string );
         void mostrarJurado( );
         void calificarCriterios(  );
+        string getNombreJurado();
 };
 
 #endif

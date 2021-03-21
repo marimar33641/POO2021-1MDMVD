@@ -30,4 +30,7 @@ void Jurado::mostrarJurado(  ){
     cout << endl;
 }
 
+string Jurado::getNombreJurado(){
+    return this-> nombreJurado;
+}
 

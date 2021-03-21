@@ -19,6 +19,10 @@ class Criterio{
         Criterio();
         Criterio( string, float, float, string, int );
         void mostrarCriterio();
+        float getCalificacion();
+        string getNombreCriterio();
+        float getPonderacion();
+        string getObservaciones();
 };
 
 #endif

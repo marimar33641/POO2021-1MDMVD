@@ -18,6 +18,7 @@ class Director{
         Director(  );
         Director( string, string, string, string );
         void mostrarDirector(  );
+        string getNombreDirector();
 };
 
 #endif

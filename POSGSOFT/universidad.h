@@ -2,9 +2,8 @@
 #define UNIVERSIDAD_H
 #include "director.h"
 #include "jurado.h"
-#include "acta.h"
 #include "estudiante.h"
-
+#include "acta.h"
 #include <iostream>
 #include <string>
 #include <list>
@@ -18,11 +17,11 @@ using std::list;
 class Universidad{
     private:
         string nombre;
-        list <Estudiante> listaEstudiantes;
         list<string> codirectores;
-    protected:
+        //Atributos folder
+        string facultad;
         list <Director> listaDirector;
-        list <Acta> listaActasXFacultad;
+        list <Estudiante> listaEstudiantes;
         list <Jurado> listaJurados;
     public:
         Universidad();
@@ -35,6 +34,25 @@ class Universidad{
         void mostrarEstudiantes();
         Estudiante getListaEstudiante( );
         Director getListaDirectores( );
+        //Funciones folder
+        void crearNuevaActa( );
+        void diligenciarCalifaciones( );
+        void calcularNota(  );
+        void ingresarInformacionAdicional(  );
+        void cerrarActa(  );
+        void guardarInformacionActa(  );
+        void mostrarInformacionActa(  );
+        void listarActas(  );
+        void consultarListaCriterios(  );
+        void eliminarActas(  );
+        void crearEstudiante( );
+        Director buscarDirector( int );
+        Jurado buscarJuradoUno( int );
+        Jurado buscarJuradoDos( int );
+        void mostrarDirectores( );
+        string getFacultad();
+
+        
 };
 
 #endif

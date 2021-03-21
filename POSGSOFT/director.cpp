@@ -22,3 +22,7 @@ void Director::mostrarDirector(  ){
     cout<< "Email: " << this->email<< endl;
     cout<< "Celular: " << this->celular<<endl;
 }
+
+string Director::getNombreDirector(){
+    return this->nombreDirector;
+}

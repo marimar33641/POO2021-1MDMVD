@@ -2,18 +2,18 @@
 #define ACTA_H
 
 #include <iostream>
-#include <string>
 #include <list>
 #include "criterio.h"
 #include "jurado.h"
 #include "director.h" 
 
-using std::cin;
+using std::getline;
+using std::list;
 using std::cout;
+using std::cin;
 using std::endl;
 using std::string;
-using std::list;
-
+using namespace std;
 class Acta{
     private:
         string titulo;
@@ -29,8 +29,8 @@ class Acta{
         Acta(  );
         Acta( string, string, Director , int, Jurado, Jurado, float, int, list<Criterio> );
         void mostrarActa( );
-        void setTitulo( string );
-        void setFecha( string );
+        void setTituloActa( string );
+        void setFechaActa( string  );
         void setDirector( Director );
         void setTipoTrabajo( int );
         void setJuradoUno( Jurado );
@@ -38,7 +38,14 @@ class Acta{
         void setNotaFinal( float );
         void setEstado( int );
         void setListaCriterios( list <Criterio> );
-        
+        string getFecha();
+        string getTitulo();
+        int getModalidad();
+        string getNombreJuradoDosActa();
+        string getNombreJuradoUnoActa();
+        string getNombreDirectorActa();
+        list <Criterio> getListaCriterios();
+
 };
 
 

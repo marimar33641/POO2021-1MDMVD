@@ -2,7 +2,6 @@
 #include "criterio.h"
 #include "acta.h"
 #include "director.h"
-#include "folderActas.h"
 #include "jurado.h"
 #include "menu.h"
 #include "universidad.h"
@@ -22,13 +21,14 @@ int main(){
         switch (opc)
         {
         case 1:
-            PUJ.crearFolderActas();
+            PUJ.crearNuevaActa();
             break;
         case 2:
             cout << "Todavia no :V"<<endl;
             break;
         case 3:
-            cout << "Todavia no :V"<<endl;
+            cout << "Todavia no :("<< endl;
+            break;
         case 4:
             PUJ.crearDirector();
             break;
