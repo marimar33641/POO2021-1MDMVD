@@ -8,6 +8,8 @@ using std::cout;
 using std::endl;
 using std::string;
 
+/*Se crea la clase Criterio con sus respectivos atributo, sus metodos y sus constructores*/
+
 class Criterio{
     private:
         string nombreCriterio;
@@ -23,6 +25,9 @@ class Criterio{
         string getNombreCriterio();
         float getPonderacion();
         string getObservaciones();
+        void mostrarNombreCriterio();
+        void setCalificacionCriterio( float );
+        void setObservacionCriterio( string );
 };
 
 #endif

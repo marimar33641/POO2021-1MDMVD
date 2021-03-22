@@ -14,10 +14,12 @@ Jurado::Jurado( string nombreJurado, int estado, string identificacion, string e
     this->celular = celular;
 }
 
+/*Se crea la funcion de mostrar jurado*/
+
 void Jurado::mostrarJurado(  ){
     cout<<"===================="<<endl;
     cout<<"Nombre: "<<this->nombreJurado<<endl;
-    cout << "Tabajo: ";
+    cout << "Trabajo: ";
     if( estado == 1 ){
         cout << "Interno" << endl;
     }
@@ -30,7 +32,16 @@ void Jurado::mostrarJurado(  ){
     cout << endl;
 }
 
+/*get de nombreJurado*/
+
 string Jurado::getNombreJurado(){
     return this-> nombreJurado;
 }
 
+int Jurado::getEstado(){
+    return this->estado;
+}
+
+string Jurado::getIdentificacion(){
+    return identificacion;
+}

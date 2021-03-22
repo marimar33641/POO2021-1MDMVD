@@ -14,6 +14,9 @@ using std::cin;
 using std::endl;
 using std::string;
 using namespace std;
+
+/*Se crea la clase Acta con sus respectivos atributo, sus metodos y sus constructores*/
+
 class Acta{
     private:
         string titulo;
@@ -45,7 +48,17 @@ class Acta{
         string getNombreJuradoUnoActa();
         string getNombreDirectorActa();
         list <Criterio> getListaCriterios();
-
+        float getNotaFinal();
+        void menuModificarActaGeneral();
+        void modificarInformacionActaGeneral();
+        void menuModificarInformacionCriterios();
+        float modificarInformacionCriterios();
+        float calcularNotaFinal();
+        int getEstado( );
+        string getJuradoActaUno();
+        string getJuradoActaDos();
+        string getDirectorActa();
+        int getExisteCorreciones();
 };
 
 

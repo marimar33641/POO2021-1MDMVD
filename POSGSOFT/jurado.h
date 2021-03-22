@@ -8,6 +8,7 @@ using std::cout;
 using std::endl;
 using std::string;
 
+/*Se crea la clase Jurado con sus respectivos atributo, sus metodos y sus constructores*/
 
 class Jurado{
     private:
@@ -23,6 +24,8 @@ class Jurado{
         void mostrarJurado( );
         void calificarCriterios(  );
         string getNombreJurado();
+        int getEstado();
+        string getIdentificacion();
 };
 
 #endif

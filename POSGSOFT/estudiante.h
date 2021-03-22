@@ -12,6 +12,9 @@ using std::cout;
 using std::endl;
 using std::string;
 using namespace std;
+
+/*Se crea la clase Estudiante con sus respectivos atributo, sus metodos y sus constructores*/
+
 class Estudiante{
     private:
         string nombre;
@@ -29,6 +32,23 @@ class Estudiante{
         void ingresarCriterios(  );
         void recibirDatos( string , string, Director, int, Jurado, Jurado, float, int );
         void crearTxt( string, string, float );
+        void mostrarActa();
+        void modificarActa();
+        void menuModificar();
+        void modificarInformacionEstudiante();
+        void menuModificarInformacionEstudiante();
+        void setNombre( string );
+        void setIdentificacion( string );
+        void setEmail ( string );
+        void setCelular( string );
+        void setId( string );
+        int getEstadoEstudiante(  );
+        int getTipoTrabajoEstudiante();
+        string getJuradoUno();
+        string getJuradoDos();
+        string getDirector();
+        float getNotaFinal();
+        int getExisteCorrecionesEstudiante();
 };
 
 #endif

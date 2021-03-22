@@ -1,0 +1,83 @@
+Ingenieria y ciencias
+ACTA: 195-195
+Fecha: 21/03/2021
+ACTA DE EVALUACION DE TRABAJO DE GRADO
+
+Trabajo de grado denominado An lisis de la similitud en el c¢digo fuente de dos programas de computador usando t‚cnicas de inteligencia artificial
+
+Autor: Maria Del Mar Villaquiran   ID: 8957040
+
+Director: Gerardo Mauricio Sarria 
+
+Modalidad: Aplicado 
+
+Jurado 1: Luisa Fernanda 
+
+Jurado 2: Luisa Fernanda 
+
+1. Desarrollo y profundidad en el tratamiento del tema
+
+Calificacion Parcial: 3.9
+Ponderacion: 20%
+Observaciones: Se desarroll¢ apropiadamente el tema y con la profundidad suficiente para su culminaci¢n
+------------------------------------------------------------------
+------------------------------------------------------------------
+2. Desafio academico y cientifico del tema
+
+Calificacion Parcial: 4.3
+Ponderacion: 10%
+Observaciones: El trabajo estuvo bien soportado y con rigor cient¡fico
+------------------------------------------------------------------
+------------------------------------------------------------------
+3. Cumplimiento de los objetivos propuestos
+
+Calificacion Parcial: 4.5
+Ponderacion: 10%
+Observaciones: Cumpli¢ con todos los objetivos. 
+------------------------------------------------------------------
+------------------------------------------------------------------
+4. Creatividad e innovacion de las soluciones y desarrollos propuestos
+
+Calificacion Parcial: 4.3
+Ponderacion: 10%
+Observaciones: La creatividad est  demostrada en el trabajo con los trigramas.
+------------------------------------------------------------------
+------------------------------------------------------------------
+5. Validez de los resultados y conclusiones
+
+Calificacion Parcial: 4
+Ponderacion: 10%
+Observaciones: Fuero adecuadas y consistentes con los hallazgos y el desarrollo el trabajo.
+------------------------------------------------------------------
+------------------------------------------------------------------
+6. Manejo y procesamiento de la informacion y bibliografia
+
+Calificacion Parcial: 4.6
+Ponderacion: 10%
+Observaciones: Bien
+------------------------------------------------------------------
+------------------------------------------------------------------
+7. Calidad y presentacion del documento escrito
+
+Calificacion Parcial: 3.75
+Ponderacion: 20%
+Observaciones: El documento tiene algunos errores de digitaci¢n y el abstract necesita revisi¢n 
+------------------------------------------------------------------
+------------------------------------------------------------------
+8. Presentacion oral
+
+Calificacion Parcial: 4.35
+Ponderacion: 10%
+Observaciones: Bien
+------------------------------------------------------------------
+------------------------------------------------------------------
+9. La calificacion final queda sujeta a que se implementen las siguientes correciones: 
+Observaciones: muy mal todo
+------------------------------------------------------------------
+------------------------------------------------------------------
+Como resultado de estas calificaciones parciales y sus ponderaciones, la calificaciÃ³n del Trabajo de Grado es: 4.135
+
+4.135
+Numero
+Cuatro Punto Uno
+Letras

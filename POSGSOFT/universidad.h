@@ -14,12 +14,12 @@ using std::endl;
 using std::string;
 using std::list;
 
+/*Se crea la clase Universidad con sus respectivos atributo, sus metodos y su constructor por defecto*/
+
 class Universidad{
     private:
         string nombre;
         list<string> codirectores;
-        //Atributos folder
-        string facultad;
         list <Director> listaDirector;
         list <Estudiante> listaEstudiantes;
         list <Jurado> listaJurados;
@@ -27,23 +27,15 @@ class Universidad{
         Universidad();
         void mostrarJurados();
         void crearJurado();
-        void mostrarFolder();
         void crearDirector();
         void mostrarTodosDirectores();
-        void crearFolderActas();
         void mostrarEstudiantes();
         Estudiante getListaEstudiante( );
         Director getListaDirectores( );
         //Funciones folder
         void crearNuevaActa( );
-        void diligenciarCalifaciones( );
-        void calcularNota(  );
-        void ingresarInformacionAdicional(  );
-        void cerrarActa(  );
-        void guardarInformacionActa(  );
         void mostrarInformacionActa(  );
         void listarActas(  );
-        void consultarListaCriterios(  );
         void eliminarActas(  );
         void crearEstudiante( );
         Director buscarDirector( int );
@@ -51,7 +43,19 @@ class Universidad{
         Jurado buscarJuradoDos( int );
         void mostrarDirectores( );
         string getFacultad();
-
+        void mostrarActa();
+        Estudiante buscarEstudiante(int);
+        void modificarActaUniversidad();
+        void listarActasPorEstado();
+        void borrarActa();
+        void listarActasPorTipoTrabajo();
+        void listarJuradoPorLugarTrabajo();
+        void listarActasPorDirector();
+        void listarActasPorJurado();
+        void listarActasPorNota();
+        void menuListarActasPorNota();
+        void verActasPorNota( int );
+        
         
 };
 

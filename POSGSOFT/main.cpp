@@ -24,10 +24,10 @@ int main(){
             PUJ.crearNuevaActa();
             break;
         case 2:
-            cout << "Todavia no :V"<<endl;
+            PUJ.modificarActaUniversidad();
             break;
         case 3:
-            cout << "Todavia no :("<< endl;
+            PUJ.mostrarActa();
             break;
         case 4:
             PUJ.crearDirector();
@@ -41,11 +41,31 @@ int main(){
         case 7:
             PUJ.mostrarJurados();
             break;
+        case 8: 
+            PUJ.listarActasPorEstado();
+            break;
+        case 9:
+            PUJ.borrarActa();
+            break;
+        case 10:
+            PUJ.listarActasPorTipoTrabajo();
+            break;
+        case 11:
+            PUJ.listarJuradoPorLugarTrabajo();
+            break;
+        case 12:
+            PUJ.listarActasPorJurado();
+            break;
+        case 13:
+            PUJ.listarActasPorDirector();
+            break;
+        case 14:
+            PUJ.listarActasPorNota();
         case 0:
             cout << "Hasta Luego :D" << endl;
-        
+            break;
         default:
-            cout << "Ponga un numero que sirva OOMMEEE : " << endl;
+            cout << "Ponga un numero que sirva OOMMEEE  " << endl;
             break;
         }
     }while(opc != 0);

@@ -26,3 +26,7 @@ void Director::mostrarDirector(  ){
 string Director::getNombreDirector(){
     return this->nombreDirector;
 }
+
+string Director::getIdentificacion(){
+    return this->identificacion;
+}
