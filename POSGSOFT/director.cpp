@@ -16,7 +16,7 @@ Director::Director( string nombreDirector, string identificacion, string email, 
     this->celular = celular;
 }
 void Director::mostrarDirector(  ){
-    
+
     cout<<"===================="<<endl;
     cout<< "Nombre: "<< this-> nombreDirector<<endl;
     cout<< "Id: "<< this-> identificacion<<endl;

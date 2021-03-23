@@ -54,6 +54,7 @@ class Universidad{
         void listarActasPorNota();
         void menuListarActasPorNota();
         void verActasPorNota( int );
+        void funcionalidadSorpresa( );
         
         
 };

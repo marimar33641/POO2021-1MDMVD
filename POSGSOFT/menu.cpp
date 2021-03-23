@@ -18,6 +18,7 @@ void menu(){
     cout << "12. Mirar actas que ha calificado un jurado: " << endl;
     cout << "13. Mirar actas por director " << endl;
     cout << "14. Listar Actas por pendiente o rechazado " << endl;
+    cout << "15. Funcionalidad sorpresa :D" << endl;
     cout << "0. Salir" << endl;
     cout << "opc = ";
 }

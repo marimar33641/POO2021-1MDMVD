@@ -196,7 +196,6 @@ float Acta :: modificarInformacionCriterios(){
             notaFinalNueva = 0;
         }
     }while(opc != 0);
-    
 }
 
 float Acta::calcularNotaFinal(){
