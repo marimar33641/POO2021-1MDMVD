@@ -59,7 +59,6 @@ void Estudiante::ingresarCriterios(){
     int jurado, i, estado;
     float calificacionj1, calificacionj2, ponderacion, notaFinal = 0, calificacionFinal = 0;
     float totalPonderado = 0;
-    cout << "Aqui paso mi ex\n";
     do
     {
         /*Estos son los criterios por defecto que si o si se van a pedir, luego se pueden agragar mas*/
@@ -158,8 +157,6 @@ void Estudiante::ingresarCriterios(){
             //Comprobacion de que la suma ponderado es igual a 100
 
             //Se añade en la lista de criterios
-            cout << "calificacion 1: " << calificacionj1 << endl;
-            cout << "calificacion 2: " << calificacionj2 << endl;
             calificacionFinal = (calificacionj1 + calificacionj2) / 2;
 
             listaCriterios.push_back(Criterio(nombreCriterio, calificacionFinal, ponderacion, observaciones, jurado));

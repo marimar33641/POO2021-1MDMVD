@@ -1,11 +1,11 @@
-Facultad Ingenieria y ciencias
-ACTA: 34-678
-Fecha: hoy
+Ingenieria y ciencias
+ACTA: 195-195
+Fecha: 21/03/2021
 ACTA DE EVALUACION DE TRABAJO DE GRADO
 
-Trabajo de grado denominado el perdido
+Trabajo de grado denominado Analisis de la similitud en el codigo fuente de dos programas de computador usando tecnicas de inteligencia artificial
 
-Autor: Fabian   ID: 123
+Autor: Maria Del Mar Villaquiran   ID: 8957040
 
 Director: Gerardo Mauricio Sarria 
 
@@ -17,67 +17,71 @@ Jurado 2: Luisa Fernanda
 
 1. Desarrollo y profundidad en el tratamiento del tema
 
-Calificacion Parcial: 3.2
+Calificacion Parcial: 3.9
 Ponderacion: 20%
-Observaciones: Todo bien
+Observaciones: Se desarrollo apropiadamente el tema y con la profundidad suficiente para su culminaci¢n
 ------------------------------------------------------------------
 ------------------------------------------------------------------
 2. Desafio academico y cientifico del tema
 
 Calificacion Parcial: 4.3
 Ponderacion: 10%
-Observaciones: Jejejeje
+Observaciones: El trabajo estuvo bien soportado y con rigor cientifico
 ------------------------------------------------------------------
 ------------------------------------------------------------------
 3. Cumplimiento de los objetivos propuestos
 
 Calificacion Parcial: 4.5
 Ponderacion: 10%
-Observaciones: Bien
+Observaciones: Cumpli¢ con todos los objetivos. 
 ------------------------------------------------------------------
 ------------------------------------------------------------------
 4. Creatividad e innovacion de las soluciones y desarrollos propuestos
 
 Calificacion Parcial: 4.3
 Ponderacion: 10%
-Observaciones: Me parece bien
+Observaciones: La creatividad esta demostrada en el trabajo con los trigramas.
 ------------------------------------------------------------------
 ------------------------------------------------------------------
 5. Validez de los resultados y conclusiones
 
-Calificacion Parcial: 3.75
+Calificacion Parcial: 4
 Ponderacion: 10%
-Observaciones: Gud
+Observaciones: Fuero adecuadas y consistentes con los hallazgos y el desarrollo el trabajo.
 ------------------------------------------------------------------
 ------------------------------------------------------------------
 6. Manejo y procesamiento de la informacion y bibliografia
 
-Calificacion Parcial: 4
+Calificacion Parcial: 4.6
 Ponderacion: 10%
-Observaciones: Esta todo bien
+Observaciones: Bien
 ------------------------------------------------------------------
 ------------------------------------------------------------------
 7. Calidad y presentacion del documento escrito
 
-Calificacion Parcial: 4.5
-Ponderacion: 5%
-Observaciones: No se, pero bien
+Calificacion Parcial: 3.75
+Ponderacion: 20%
+Observaciones: El documento tiene algunos errores de digitaci¢n y el abstract necesita revisi¢n 
 ------------------------------------------------------------------
 ------------------------------------------------------------------
 8. Presentacion oral
 
-Calificacion Parcial: 4.05
-Ponderacion: 25%
-Observaciones: Bien, eso espero
+Calificacion Parcial: 4.35
+Ponderacion: 10%
+Observaciones: Bien
 ------------------------------------------------------------------
 ------------------------------------------------------------------
-9. La calificacion final queda sujeta a que se implementen las siguientes correciones: 
-Observaciones: Esto necesita mejorar muchisimo para eso nada
+9. Observaciones Extra
+Observaciones: Fue un trabajo muy bueno :D
 ------------------------------------------------------------------
 ------------------------------------------------------------------
-Como resultado de estas calificaciones parciales y sus ponderaciones, la calificaci√≥n del Trabajo de Grado es: 3.9625
+10. La calificacion final queda sujeta a que se implementen las siguientes correciones: 
+Observaciones: Tiene que mejorar el criterio 4
+------------------------------------------------------------------
+------------------------------------------------------------------
+Como resultado de estas calificaciones parciales y sus ponderaciones, la calificaci√≥n del Trabajo de Grado es: 4.135
 
-3.9625
+4.135
 Numero
-Tres Punto Nueve
+Cuatro Punto Uno
 Letras

@@ -183,12 +183,9 @@ float Acta :: modificarInformacionCriterios(){
                 cin>>nuevaCalificacion;
                 it->setCalificacionCriterio( nuevaCalificacion );
                 for( list<Criterio>::iterator it = listaCriterios.begin();it != listaCriterios.end(); it++ ){
-                    cout<<"==================Nota final: "<< notaFinalNueva << endl;
                     notaFinalNueva += (it->getPonderacion() * it->getCalificacion()) / 100;
                 } 
-                cout<<"==================Nota final2: "<< notaFinalNueva << endl;
-                setNotaFinal(notaFinalNueva);  
-                cout<<"==================Nota final3: "<< notaFinalNueva << endl;    
+                setNotaFinal(notaFinalNueva);    
             }
             else if( opc2 == 2 ){
                 cout<<"Digite la nueva observacion: ";

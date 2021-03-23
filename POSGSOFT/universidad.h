@@ -34,15 +34,14 @@ class Universidad{
         Director getListaDirectores( );
         //Funciones folder
         void crearNuevaActa( );
-        void mostrarInformacionActa(  );
-        void listarActas(  );
-        void eliminarActas(  );
+        void mostrarInformacionActa();
+        void listarActas();
+        void eliminarActas();
         void crearEstudiante( );
         Director buscarDirector( int );
         Jurado buscarJuradoUno( int );
         Jurado buscarJuradoDos( int );
         void mostrarDirectores( );
-        string getFacultad();
         void mostrarActa();
         Estudiante buscarEstudiante(int);
         void modificarActaUniversidad();

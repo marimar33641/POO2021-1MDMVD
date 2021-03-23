@@ -13,8 +13,12 @@ enum TipoTrabajo{
 
 /*Esta funcion es recorrer la lista de estudiantes. Desde begin (inicio) hasta que el it sea diferente al final de la lista. Luego se imprime los estudiantes(Funcion en estudiantes)*/
 void Universidad::mostrarEstudiantes( ){
-    for(list<Estudiante>::iterator it = listaEstudiantes.begin(); it != listaEstudiantes.end(); it++ )
-    it->mostrarEstudiante();
+    int i = 1;
+    for(list<Estudiante>::iterator it = listaEstudiantes.begin(); it != listaEstudiantes.end(); it++ ){
+        cout << i << ". ";
+        it->mostrarEstudiante();
+    }
+    
 }
 
 /*Creamos una funcion de crear director donde le preguntamos todos lo datos necesarios y les hacemos push_back a la listaDirector, o sea, se cargan a la lista*/
@@ -42,8 +46,11 @@ void Universidad::crearDirector( ){
 /*Esta funcion es recorrer la lista de directores. Desde begin (inicio) hasta que el it sea diferente al final de la lista. Luego se imprime los directores(Funcion en director)*/
 
 void Universidad::mostrarTodosDirectores(){
-    for(list<Director>::iterator it = listaDirector.begin(); it != listaDirector.end(); it++ )
+    int i = 1;
+    for(list<Director>::iterator it = listaDirector.begin(); it != listaDirector.end(); it++ ){
+        cout << i << ". ";
         it->mostrarDirector();
+    }
 }
 
 /*Creamos una funcion de crear jurado donde le preguntamos todos lo datos necesarios y les hacemos push_back a la listaJurado, o sea, se cargan a la lista*/
@@ -54,7 +61,7 @@ void Universidad::crearJurado( ){
     string identificacion;
     string email;
     string celular;
-    cout << "Ingrese el nombre del nuevo jurado: " << endl;
+    cout << "Ingrese el nombre del jurado: " << endl;
     fflush(stdin);
     getline( cin, nombreJurado );
     do{
@@ -63,9 +70,8 @@ void Universidad::crearJurado( ){
         cout << "2. Externo" << endl;
         scanf("%d", &tipo);
     }while( tipo <= 0 || tipo > 2 );
-    cout << "Ingrese el nombre del jurado: " << endl;
-    fflush(stdin);
     cout << "Ingrese la identificacion del jurado: " << endl;
+    fflush(stdin);
     getline(cin, identificacion);
     cout<< "Ingrese el email: " << endl;
     fflush(stdin);
@@ -80,7 +86,9 @@ void Universidad::crearJurado( ){
 /*Esta funcion es recorrer la lista de jurados. Desde begin (inicio) hasta que el it sea diferente al final de la lista. Luego se imprime los jurados(Funcion en jurado)*/
 
 void Universidad::mostrarJurados( ){
+    int i = 1;
     for( list<Jurado>::iterator it = listaJurados.begin(); it != listaJurados.end(); it++ ){
+        cout << i << ". ";
         it->mostrarJurado( );
     }
 }
@@ -200,6 +208,17 @@ void Universidad::crearNuevaActa( ){
     string nombreTrabajo;
     list<Criterio> listaCriteriosVacia;
     int tipoTrabajo, estado, numeroDirector, numeroJuradoUno = 0, numeroJuradoDos = 0, contador = 1;
+
+    if(listaJurados.size() == 0  ){
+        cout << "Necesitas al menos un jurado para crear un acta" << endl;
+        return;
+    }
+
+    if(listaDirector.size() == 0){
+        cout << "Necesitas al menos un director para crear un acta" << endl;
+        return;
+    }
+
     /*Creamos un nuevo estudiante quien sera el dueño del acta*/
     crearEstudiante();
     // Pedimos todos los datos que necesita un acta
@@ -246,21 +265,27 @@ void Universidad::mostrarActa(){
     /*Mostramos todos los estudiantes y pedimos que ingrese el numero del estudiante que desea ver*/
     int i = 1, numeroEstudiante;
     Estudiante EstudianteMirar;
-    for( list<Estudiante>::iterator it = listaEstudiantes.begin(); it != listaEstudiantes.end(); it++ ){
-        cout << i << ". ";
-        it->mostrarEstudiante();
-        i++;
+    if(listaEstudiantes.size() == 0){
+        cout << "No tenemos actas para mostrar" << endl;
+        return;
     }
-    /*Comprobamos que ingrese un numero valido*/
-    do{
-        cout << "Ingrese el numero del estudiante de quien desea ver el acta: "<< endl;
-        cin >> numeroEstudiante;
-        if(numeroEstudiante <= 0 || numeroEstudiante > listaEstudiantes.size()){
-            cout << "Numero invalido" << endl;
+    else{
+        for( list<Estudiante>::iterator it = listaEstudiantes.begin(); it != listaEstudiantes.end(); it++ ){
+            cout << i << ". ";
+            it->mostrarEstudiante();
+            i++;
         }
-    }while(numeroEstudiante <= 0 || numeroEstudiante > listaEstudiantes.size());
-    EstudianteMirar =  buscarEstudiante( numeroEstudiante );
-    EstudianteMirar.mostrarActa();
+        /*Comprobamos que ingrese un numero valido*/
+        do{
+            cout << "Ingrese el numero del estudiante de quien desea ver el acta: "<< endl;
+            cin >> numeroEstudiante;
+            if(numeroEstudiante <= 0 || numeroEstudiante > listaEstudiantes.size()){
+                cout << "Numero invalido" << endl;
+            }
+        }while(numeroEstudiante <= 0 || numeroEstudiante > listaEstudiantes.size());
+        EstudianteMirar =  buscarEstudiante( numeroEstudiante );
+        EstudianteMirar.mostrarActa();
+    }
 }
 
 void Universidad :: modificarActaUniversidad(){
@@ -323,12 +348,18 @@ void Universidad::borrarActa(){
     cout << "opc = ";
     cin >> opc;
     /*Recorremos la lista de estudiantes hasta llegar al numero de estudiante que deseamos eliminar que seria el opc que escogió el usuario*/
-    list<Estudiante> :: iterator it = listaEstudiantes.begin();
-    for(i = 1; i < listaEstudiantes.size(); i++ ){
-        it++;
-        if( i == opc ){
-            listaEstudiantes.erase(it);
-            break;
+    if(opc == 1){
+        list<Estudiante> :: iterator it = listaEstudiantes.begin();  
+        listaEstudiantes.erase(it);
+    }
+    else{
+        list<Estudiante> :: iterator it = listaEstudiantes.begin();
+        for(i = 1; i < listaEstudiantes.size(); i++ ){
+            it++;
+            if( i == opc ){
+                listaEstudiantes.erase(it);
+                break;
+            }
         }
     }
 }
@@ -336,7 +367,7 @@ void Universidad::borrarActa(){
 void Universidad::listarActasPorTipoTrabajo(){
     /*preguntamos si quiere listar las actas Aplicadas o Investigacion*/
     /*tenemos que las listas que tengan un estado de 2 son las abiertas y si tienen un estado de 1 estan cerradas*/
-    int opc;
+    int opc, i = 1;
     do{
         cout << "Desea listar las actas: " << endl<< "1. Aplicado" << endl << "2.Investigacion" << endl<< "opc = ";
         cin >> opc;
@@ -348,16 +379,22 @@ void Universidad::listarActasPorTipoTrabajo(){
     if( opc == 1 ){
         for( list<Estudiante>::iterator it = listaEstudiantes.begin(); it != listaEstudiantes.end(); it++ ){
             if( it->getTipoTrabajoEstudiante() == 1 ){
+                cout << i << ". ";
                 it->mostrarEstudiante();
+                i++;
             } 
         }
+        cout << "La cantidad de actas de tipo aplicadas: " << i - 1<< endl;
+        i = 0;
     }
     else{
         for( list<Estudiante>::iterator it = listaEstudiantes.begin(); it != listaEstudiantes.end(); it++ ){
             if( it->getTipoTrabajoEstudiante() == 2 ){
+                cout << i << ". ";
                 it->mostrarEstudiante();
             } 
         }
+        cout << "La cantidad de actas de tipo investigacion es: " << i - 1 << endl;
     }
 }
 
@@ -369,6 +406,7 @@ void Universidad::listarActasPorTipoTrabajo(){
 void Universidad::listarJuradoPorLugarTrabajo(){
     /*Si es interno el estado es igual a 1, si externo es igual a 2*/
     int opc;
+    int i = 1;
     do{
         cout << "Ingrese que tipo de jurado desea ver" << endl << "1. interno" << endl << "2.Externo" << endl; "opc = ";
         cin >> opc;
@@ -379,40 +417,50 @@ void Universidad::listarJuradoPorLugarTrabajo(){
     if(opc == 1){
         for( list<Jurado>::iterator it = listaJurados.begin(); it != listaJurados.end(); it++ ){
             if(it->getEstado() == 1){
+                cout << i << ". ";
                 it->mostrarJurado();
+                i++;
             } 
         }
+        cout << "La cantidad de jurados internos es " << i - 1 << endl;
+        i = 0;
     }
     else{
         for( list<Jurado>::iterator it = listaJurados.begin(); it != listaJurados.end(); it++ ){
             if(it->getEstado() == 2){
+                cout << i << ". ";
                 it->mostrarJurado();
+                i++;
             } 
         }
+        cout << "La cantidad de jurados externos es " << i - 1 << endl;
     }
 }
 
 /*Creamos una funcion el cual recorremos la lista de estudiantes y hacemos que si el directorABuscar ( la id de ese director que el usuario ingreso) es igual al que esta en la lista, si es así pues se muestra la acta con los datos del estudiante.*/
 
-void Universidad::listarActasPorDirector(){
+void Universidad :: listarActasPorDirector(){
     mostrarTodosDirectores();
-    int opc;
+    int opc, i = 1;
     Director directorABuscar;
     cout << "Ingrese el numero del director: "<<endl;
     cin>>opc;
     directorABuscar = buscarDirector( opc );
     for( list<Estudiante>::iterator it = listaEstudiantes.begin(); it != listaEstudiantes.end(); it++ ){
         if( directorABuscar.getIdentificacion() == it->getDirector() ){
+            cout << i << ". ";
             it->mostrarEstudiante();
+            i++;
         }
     }
+    cout<<"La cantidad de actas que califico en :"<< i - 1 << " actas" << endl;
 }
 
 /*Creamos una funcion el cual recorremos la lista de estudiantes y hacemos que si el juradoABuscar ( la id de ese jurado que el usuario ingreso) es igual al que esta en la lista, si es así pues se muestra la acta con los datos del estudiante.*/
 
 
 void Universidad :: listarActasPorJurado(){
-    int opc;
+    int opc, i = 1;
     Jurado JuradoABuscar;
     mostrarJurados();
     cout << "Ingrese el numero del jurado: " << endl;
@@ -420,9 +468,12 @@ void Universidad :: listarActasPorJurado(){
     JuradoABuscar = buscarJuradoUno( opc );
     for( list<Estudiante>::iterator it = listaEstudiantes.begin(); it != listaEstudiantes.end(); it++ ){
         if(JuradoABuscar.getIdentificacion() == it->getJuradoUno() || JuradoABuscar.getIdentificacion() == it->getJuradoDos()){
+            cout << i << ". ";
             it->mostrarEstudiante();
+            i++;
         }
     }
+    cout << "La cantidad de actas que califico este jurado es: " << i - 1 << endl;
 }
 void Universidad ::menuListarActasPorNota(){
     cout << "1. Ver actas Aprobadas "<<endl;
